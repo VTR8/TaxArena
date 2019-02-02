@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppComponent } from './app.component';
 import { GalleryComponent } from './gallery/gallery.component';
@@ -29,15 +31,16 @@ const appRoutes: Routes = [
     NavBarComponent,
     ServicesOfferedComponent,
     ContactUsComponent,
-    ServicesListComponent
+    ServicesListComponent,
+ 
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(
       appRoutes
     )
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
